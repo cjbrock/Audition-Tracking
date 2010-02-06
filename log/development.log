@@ -1,0 +1,293 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (131.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (137.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuditions (20100206164556)
+  [4;36;1mSQL (96.0ms)[0m   [0;1mCREATE TABLE `auditions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) NOT NULL, `location` varchar(255) NOT NULL, `date` datetime NOT NULL, `reqs` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `notes` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100206164556')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `auditions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `auditions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-06 11:53:10) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 11:55:52) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 11:58:11) [GET]
+
+ActionView::MissingTemplate (Missing template audition/index.erb in view path app/views):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 11:59:00) [GET]
+Rendering audition/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:04:17) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:18:16) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+Completed in 108ms (View: 98, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:18:20) [GET]
+Rendering audition/new
+Completed in 231ms (View: 227, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:20:36) [GET]
+Rendering audition/new
+Completed in 37ms (View: 33, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:21:28) [GET]
+Rendering audition/new
+Completed in 37ms (View: 33, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:21:55) [GET]
+Rendering audition/new
+Completed in 102ms (View: 98, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:22:10) [GET]
+Rendering audition/new
+Completed in 35ms (View: 31, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:22:28) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"Here", "date(2i)"=>"2", "title"=>"Fake Audition 1", "notes"=>"", "reqs"=>"", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"22"}}
+Rendering audition/new
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:25:01) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"Here", "date(2i)"=>"2", "title"=>"Fake Audition 1", "notes"=>"", "reqs"=>"", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"22"}}
+Rendering audition/new
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mAudition Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudition Create (0.0ms)[0m   [0mMysql::Error: Column 'location' cannot be null: INSERT INTO `auditions` (`location`, `created_at`, `title`, `reqs`, `notes`, `updated_at`, `date`, `status`) VALUES(NULL, '2010-02-06 17:33:32', NULL, '', NULL, '2010-02-06 17:33:32', NULL, 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:37:41) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"jklfdas", "date(2i)"=>"2", "title"=>"jfkdlsa", "notes"=>"", "reqs"=>"", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"25"}}
+  [4;36;1mAudition Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mAudition Create (0.4ms)[0m   [0;1mINSERT INTO `auditions` (`location`, `created_at`, `title`, `reqs`, `notes`, `updated_at`, `date`, `status`) VALUES('jklfdas', '2010-02-06 17:37:41', 'jfkdlsa', '', '', '2010-02-06 17:37:41', '2010-02-06 17:25:00', 0)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 25ms (DB: 4) | 302 Found [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:37:41) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;36;1mAudition Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+Completed in 17ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:39:39) [GET]
+  [4;36;1mAudition Load (0.4ms)[0m   [0;1mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;35;1mAudition Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:39:58) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;36;1mAudition Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:40:01) [GET]
+Rendering audition/new
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:40:02) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"", "date(2i)"=>"2", "title"=>"hi there", "notes"=>"", "reqs"=>"", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"40"}}
+  [4;35;1mAudition Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudition Create (0.3ms)[0m   [0mINSERT INTO `auditions` (`location`, `created_at`, `title`, `reqs`, `notes`, `updated_at`, `date`, `status`) VALUES('', '2010-02-06 17:40:02', 'hi there', '', '', '2010-02-06 17:40:02', '2010-02-06 17:40:00', 0)[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 22ms (DB: 4) | 302 Found [http://localhost/new_audition]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:40:03) [GET]
+  [4;36;1mAudition Load (0.4ms)[0m   [0;1mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;35;1mAudition Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+Completed in 18ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:40:42) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;36;1mAudition Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:41:40) [GET]
+Rendering audition/new
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:41:43) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"", "date(2i)"=>"2", "title"=>"fdsafdsa", "notes"=>"", "reqs"=>"", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"41"}}
+  [4;35;1mAudition Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering audition/new
+Completed in 51ms (View: 32, DB: 2) | 200 OK [http://localhost/new_audition]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#new (for 127.0.0.1 at 2010-02-06 12:43:33) [POST]
+  Parameters: {"commit"=>"create", "authenticity_token"=>"NQXOSub+V593hbiOWfWRhAyot0hTnFvGyPCu00C5Fww=", "audition"=>{"date(1i)"=>"2010", "location"=>"Emerson", "date(2i)"=>"2", "title"=>"fdsafdsa", "notes"=>"I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.", "reqs"=>"this song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\n", "date(3i)"=>"6", "date(4i)"=>"17", "date(5i)"=>"41"}}
+  [4;35;1mAudition Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudition Create (0.4ms)[0m   [0mINSERT INTO `auditions` (`location`, `created_at`, `title`, `reqs`, `notes`, `updated_at`, `date`, `status`) VALUES('Emerson', '2010-02-06 17:43:33', 'fdsafdsa', 'this song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\nthis song\r\nage\r\nreading\r\n', 'I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.I think this is awesome.', '2010-02-06 17:43:33', '2010-02-06 17:41:00', 0)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 24ms (DB: 4) | 302 Found [http://localhost/new_audition]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:43:33) [GET]
+  [4;36;1mAudition Load (0.5ms)[0m   [0;1mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;35;1mAudition Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+Completed in 19ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:43:44) [GET]
+  [4;35;1mAudition Load (0.4ms)[0m   [0mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;36;1mAudition Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#index (for 127.0.0.1 at 2010-02-06 12:47:38) [GET]
+  [4;36;1mAudition Load (0.4ms)[0m   [0;1mSELECT * FROM `auditions` [0m
+Rendering audition/index
+  [4;35;1mAudition Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+Completed in 33ms (View: 20, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#view_audition (for 127.0.0.1 at 2010-02-06 12:47:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAudition Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mAudition Load (0.4ms)[0m   [0;1mSELECT * FROM `auditions` WHERE (`auditions`.`id` = 1) [0m
+Rendering audition/view_audition
+Completed in 24ms (View: 10, DB: 3) | 200 OK [http://localhost/view_audition/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#view_audition (for 127.0.0.1 at 2010-02-06 12:47:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAudition Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+  [4;35;1mAudition Load (0.3ms)[0m   [0mSELECT * FROM `auditions` WHERE (`auditions`.`id` = 2) [0m
+Rendering audition/view_audition
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/view_audition/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#view_audition (for 127.0.0.1 at 2010-02-06 12:47:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAudition Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `auditions`[0m
+  [4;36;1mAudition Load (0.3ms)[0m   [0;1mSELECT * FROM `auditions` WHERE (`auditions`.`id` = 1) [0m
+Rendering audition/view_audition
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/view_audition/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuditionController#view_audition (for 127.0.0.1 at 2010-02-06 12:48:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAudition Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `auditions`[0m
+  [4;35;1mAudition Load (0.3ms)[0m   [0mSELECT * FROM `auditions` WHERE (`auditions`.`id` = 3) [0m
+Rendering audition/view_audition
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/view_audition/3]

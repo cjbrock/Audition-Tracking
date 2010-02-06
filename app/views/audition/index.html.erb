@@ -1,0 +1,16 @@
+<% if flash[:notice] -%>
+	<div id="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end -%>
+
+<%= link_to("Create New Audition", new_audition_url)%>
+
+<h2>Audition Listings</h2>
+
+<% @auditions.each do |audition| %>
+	<div class="audition">
+		<%= link_to(audition.title, view_audition_url(:id => audition.id)) %>
+	</div>
+<% end %>
+
