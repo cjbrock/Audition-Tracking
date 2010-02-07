@@ -8,9 +8,15 @@
 
 <h2>Audition Listings</h2>
 
-<% @auditions.each do |audition| %>
-	<div class="audition">
-		<%= link_to(audition.title, view_audition_url(:id => audition.id)) %>
-	</div>
-<% end %>
-
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Interest</th>
+	</tr>
+	<% @auditions.each do |audition| %>
+		<tr>
+			<td><%= link_to(audition.title, view_audition_url(:id => audition.id)) %></td>
+			<td id="audition_<%= audition.id %>"><%= link_to_remote(audition.display_status, :url => flip_status_url(:id => audition.id))%></td>
+		</tr>
+	<% end %>
+</table>

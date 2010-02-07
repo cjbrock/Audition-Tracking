@@ -3,8 +3,10 @@ ActionController::Routing::Routes.draw do |map|
   
   
   map.with_options :controller => 'audition' do |audition|
+    audition.audition_listing     'audition_listing',   :action => 'index'
     audition.new_audition         'new_audition',       :action => 'new'
     audition.view_audition        'view_audition/:id',  :action => 'view_audition'
+    audition.flip_status          'flip_status/:id',    :action => 'flip_status'    
    end
 
   # Sample of regular route:
