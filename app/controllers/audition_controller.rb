@@ -1,6 +1,15 @@
 class AuditionController < ApplicationController
   def index
-    @auditions = Audition.find(:all)
+    if params[:date]
+      case params[:date]
+      when 'past'
+        @auditions = Audition.past.basic.ralpha
+      when 'active'
+        @auditions = Audition.active.basic.alpha
+      end
+    else  
+      @auditions = Audition.basic.ralpha
+    end
   end
   
   def new

@@ -7,6 +7,12 @@ class Audition < ActiveRecord::Base
   NO_INTEREST = 0
   INTEREST    = 1
 
+  named_scope :past, lambda {{:conditions => ['date < ?', Time.now] }}
+  named_scope :active, lambda {{:conditions => ['date >= ?', Time.now.beginning_of_day] }}
+  named_scope :basic, :select => 'id, title, location, date, status'
+  named_scope :alpha, :order => 'date asc'
+  named_scope :ralpha, :order => 'date desc'
+
   def flip_status
     if self.status == NO_INTEREST
       self.update_attributes(:status => INTEREST)

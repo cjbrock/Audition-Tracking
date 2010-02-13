@@ -1,6 +1,6 @@
 <%= link_to("Back to listings", audition_listing_url) %> <br/>
 
-<h2>The audition is <%= @audition.title %></h2>
+<h2><%= @audition.title %></h2>
 
 <p>
 	Location:
@@ -20,4 +20,10 @@
 <p>
 	Notes:<br/>
 	<%= @audition.notes %>
+</p>
+
+<p>
+	<div id="audition_<%= @audition.id %>">
+		<%= link_to_remote(@audition.display_status, :url => flip_status_url(:id => @audition.id))%>
+	</div>
 </p>

@@ -7,16 +7,24 @@
 <%= link_to("Create New Audition", new_audition_url)%>
 
 <h2>Audition Listings</h2>
+<div id='navigation_links'>
+	<span><%= link_to_unless_current("All", audition_listing_url)%></span> |
+	<span><%= link_to_unless_current("Current", view_audition_date_url(:date => 'active'))%></span> |
+	<span><%= link_to_unless_current("Past", view_audition_date_url(:date => 'past'))%></span>
+</div>
+
 
 <table>
 	<tr>
 		<th>Title</th>
 		<th>Interest</th>
+		<th>Date</th>
 	</tr>
 	<% @auditions.each do |audition| %>
 		<tr>
 			<td><%= link_to(audition.title, view_audition_url(:id => audition.id)) %></td>
 			<td id="audition_<%= audition.id %>"><%= link_to_remote(audition.display_status, :url => flip_status_url(:id => audition.id))%></td>
+			<td> <%= audition.date.strftime('%A %b %e, %Y %l:%M %p') %></td>
 		</tr>
 	<% end %>
 </table>
